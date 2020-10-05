@@ -13,6 +13,10 @@
 		9697C7C3252B824E00FD8E4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9697C7C1252B824E00FD8E4D /* Main.storyboard */; };
 		9697C7C5252B824F00FD8E4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9697C7C4252B824F00FD8E4D /* Assets.xcassets */; };
 		9697C7C8252B824F00FD8E4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9697C7C6252B824F00FD8E4D /* LaunchScreen.storyboard */; };
+		9697C7D1252B835600FD8E4D /* MyTestField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697C7D0252B835600FD8E4D /* MyTestField.swift */; };
+		9697C7D3252B890500FD8E4D /* MyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697C7D2252B890500FD8E4D /* MyAlert.swift */; };
+		9697C7D6252B91EA00FD8E4D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697C7D5252B91EA00FD8E4D /* Question.swift */; };
+		9697C7D9252B95BA00FD8E4D /* QuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697C7D8252B95BA00FD8E4D /* QuestionVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		9697C7C4252B824F00FD8E4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9697C7C7252B824F00FD8E4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9697C7C9252B824F00FD8E4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9697C7D0252B835600FD8E4D /* MyTestField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTestField.swift; sourceTree = "<group>"; };
+		9697C7D2252B890500FD8E4D /* MyAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlert.swift; sourceTree = "<group>"; };
+		9697C7D5252B91EA00FD8E4D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		9697C7D8252B95BA00FD8E4D /* QuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		9697C7BA252B824E00FD8E4D /* Trivia App */ = {
 			isa = PBXGroup;
 			children = (
+				9697C7D7252B959100FD8E4D /* Controller */,
+				9697C7D4252B91D200FD8E4D /* Model */,
+				9697C7CF252B833D00FD8E4D /* Custom */,
 				9697C7BB252B824E00FD8E4D /* AppDelegate.swift */,
 				9697C7BD252B824E00FD8E4D /* SceneDelegate.swift */,
-				9697C7BF252B824E00FD8E4D /* ViewController.swift */,
 				9697C7C1252B824E00FD8E4D /* Main.storyboard */,
 				9697C7C4252B824F00FD8E4D /* Assets.xcassets */,
 				9697C7C6252B824F00FD8E4D /* LaunchScreen.storyboard */,
 				9697C7C9252B824F00FD8E4D /* Info.plist */,
 			);
 			path = "Trivia App";
+			sourceTree = "<group>";
+		};
+		9697C7CF252B833D00FD8E4D /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				9697C7D0252B835600FD8E4D /* MyTestField.swift */,
+				9697C7D2252B890500FD8E4D /* MyAlert.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		9697C7D4252B91D200FD8E4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9697C7D5252B91EA00FD8E4D /* Question.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9697C7D7252B959100FD8E4D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9697C7BF252B824E00FD8E4D /* ViewController.swift */,
+				9697C7D8252B95BA00FD8E4D /* QuestionVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +175,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9697C7C0252B824E00FD8E4D /* ViewController.swift in Sources */,
+				9697C7D3252B890500FD8E4D /* MyAlert.swift in Sources */,
+				9697C7D9252B95BA00FD8E4D /* QuestionVC.swift in Sources */,
 				9697C7BC252B824E00FD8E4D /* AppDelegate.swift in Sources */,
+				9697C7D6252B91EA00FD8E4D /* Question.swift in Sources */,
+				9697C7D1252B835600FD8E4D /* MyTestField.swift in Sources */,
 				9697C7BE252B824E00FD8E4D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
