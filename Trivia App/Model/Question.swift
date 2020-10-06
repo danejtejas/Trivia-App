@@ -9,6 +9,7 @@
 import Foundation
 
 
+/// Question class  use for data store statical
 class  Question : NSObject {
     
     var order : Int?
@@ -18,6 +19,8 @@ class  Question : NSObject {
     var option3 : String?
     var option4 : String?
     var isAllowMultipleSelect : Bool = false
+    
+    var selectAns : String?
     
     override init() {
         super.init()
@@ -42,11 +45,16 @@ class  Question : NSObject {
 
 
 
+
+
+/// here questionData is singoleton class use because data save as application level
 class QuestionData : NSObject  {
+    
+    static var shared = QuestionData()
     
     var arrQuestions : [Question] = []
     
-    override init() {
+  private   override init() {
         
       
         
@@ -78,3 +86,8 @@ class QuestionData : NSObject  {
     }
     
 }
+
+
+
+
+

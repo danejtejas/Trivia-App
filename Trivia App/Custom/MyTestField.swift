@@ -31,7 +31,7 @@ class MyTestField: UITextField {
     
     override func layoutSubviews() {
         
-        lineView.frame = CGRect(x: 0, y: bounds.height - 1, width: bounds.width, height: 1)
+        lineView.frame = CGRect(x: 0, y: bounds.height - 5, width: bounds.width, height: 1)
         
     }
     
@@ -41,7 +41,7 @@ class MyTestField: UITextField {
         font = UIFont(name: "Avenir-Medium", size: 17)
         
         lineView = UIView()
-        lineView.backgroundColor = .gray
+        lineView.backgroundColor = #colorLiteral(red: 0.8823529412, green: 0.8823529412, blue: 0.8823529412, alpha: 1)
         addSubview(lineView)
         
     }

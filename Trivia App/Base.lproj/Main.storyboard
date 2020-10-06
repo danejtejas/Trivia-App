@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cQ6-Wa-QKS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oxV-yg-Tec">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -10,60 +10,76 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Trivia_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Trivia_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="h4c-2x-lxd">
-                                <rect key="frame" x="30" y="403" width="354" height="90"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6WH-uc-OaW" customClass="MyView" customModule="Trivia_App" customModuleProvider="target">
+                                <rect key="frame" x="20" y="353" width="374" height="110"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your name?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3D-1t-Jbx">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="42.5"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MGg-aD-W1a" customClass="MyTestField" customModule="Trivia_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="47.5" width="354" height="42.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="h4c-2x-lxd">
+                                        <rect key="frame" x="20" y="10" width="334" height="85"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your name?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3D-1t-Jbx">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="42.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                <color key="textColor" red="0.53720778229999999" green="0.5372861028" blue="0.53718304630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MGg-aD-W1a" customClass="MyTestField" customModule="Trivia_App" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="42.5" width="334" height="42.5"/>
+                                                <color key="textColor" red="0.24703478810000001" green="0.24707472320000001" blue="0.24702218170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="ven-Q8-ztA"/>
+                                    <constraint firstAttribute="height" constant="110" id="1Mq-88-bYJ"/>
+                                    <constraint firstItem="h4c-2x-lxd" firstAttribute="top" secondItem="6WH-uc-OaW" secondAttribute="top" constant="10" id="R5u-Y7-um5"/>
+                                    <constraint firstAttribute="bottom" secondItem="h4c-2x-lxd" secondAttribute="bottom" constant="15" id="gms-3F-vvK"/>
+                                    <constraint firstItem="h4c-2x-lxd" firstAttribute="leading" secondItem="6WH-uc-OaW" secondAttribute="leading" constant="20" id="rf1-JE-g56"/>
+                                    <constraint firstAttribute="trailing" secondItem="h4c-2x-lxd" secondAttribute="trailing" constant="20" id="uqJ-vK-1JJ"/>
                                 </constraints>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXR-7l-cWa">
-                                <rect key="frame" x="334" y="513" width="40" height="30"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXR-7l-cWa" customClass="MyButton" customModule="Trivia_App" customModuleProvider="target">
+                                <rect key="frame" x="40" y="493" width="334" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="DOH-nn-W0Y"/>
-                                    <constraint firstAttribute="width" constant="40" id="M3Q-xR-Ghi"/>
+                                    <constraint firstAttribute="height" constant="50" id="HD6-C6-oUN"/>
                                 </constraints>
-                                <state key="normal" title="Next"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="btnNextClickWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PKa-HR-2pt"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="h4c-2x-lxd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dhb-55-W3F"/>
-                            <constraint firstItem="h4c-2x-lxd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="Jlp-su-kWW"/>
-                            <constraint firstItem="LXR-7l-cWa" firstAttribute="top" secondItem="h4c-2x-lxd" secondAttribute="bottom" constant="20" id="c7q-jT-6aZ"/>
-                            <constraint firstAttribute="trailing" secondItem="LXR-7l-cWa" secondAttribute="trailing" constant="40" id="hNy-Mg-pXf"/>
-                            <constraint firstAttribute="trailing" secondItem="h4c-2x-lxd" secondAttribute="trailing" constant="30" id="lxS-Vt-1Ld"/>
-                            <constraint firstItem="h4c-2x-lxd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nIP-v2-eg2"/>
+                            <constraint firstItem="6WH-uc-OaW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="IBc-j9-a9J"/>
+                            <constraint firstItem="LXR-7l-cWa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="MPw-Rw-yur"/>
+                            <constraint firstAttribute="trailing" secondItem="6WH-uc-OaW" secondAttribute="trailing" constant="20" id="YIv-wy-yMa"/>
+                            <constraint firstItem="6WH-uc-OaW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="geq-LF-3hU"/>
+                            <constraint firstItem="LXR-7l-cWa" firstAttribute="top" secondItem="6WH-uc-OaW" secondAttribute="bottom" constant="30" id="qI7-O5-dN5"/>
+                            <constraint firstAttribute="trailing" secondItem="LXR-7l-cWa" secondAttribute="trailing" constant="40" id="vmr-Gv-rFE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="XlG-6X-za5"/>
                     <connections>
+                        <outlet property="nameView" destination="6WH-uc-OaW" id="jJr-ry-i2x"/>
                         <outlet property="txtName" destination="MGg-aD-W1a" id="gkM-ww-84a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="284" y="-74"/>
+            <point key="canvasLocation" x="247.82608695652175" y="-62.276785714285708"/>
         </scene>
         <!--QuestionVC-->
         <scene sceneID="Pti-vd-YFs">
@@ -73,32 +89,658 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who is the best cricketer in the world?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1o2-Q1-efm">
-                                <rect key="frame" x="30" y="320" width="354" height="42.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsJ-u7-S2d">
-                                <rect key="frame" x="296" y="412" width="41" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvb-wN-iuT" userLabel="questionView" customClass="MyView" customModule="Trivia_App" customModuleProvider="target">
+                                <rect key="frame" x="20" y="271.5" width="374" height="273.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who is the best cricketer in the world?" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1o2-Q1-efm">
+                                        <rect key="frame" x="20" y="20" width="334" height="23.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="NzL-cN-3in"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owP-yt-eF5" userLabel="line view">
+                                        <rect key="frame" x="0.0" y="53.5" width="374" height="1"/>
+                                        <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="h5x-e1-UCo"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G36-DS-va5" customClass="RadioButtonContainerView" customModule="Trivia_App" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="63.5" width="334" height="200"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCd-9a-Ej8" customClass="RadioButton" customModule="Trivia_App" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="iBh-sg-gxk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                                <color key="tintColor" red="0.42350995540000003" green="0.41964292530000002" blue="0.41952067609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNB-q5-BUl" customClass="RadioButton" customModule="Trivia_App" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="100" width="334" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="hfL-hD-6Xu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                                <color key="tintColor" red="0.42350995540000003" green="0.41964292530000002" blue="0.41952067609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqm-mh-qQD" customClass="RadioButton" customModule="Trivia_App" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="150" width="334" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="19h-8G-MIL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                                <color key="tintColor" red="0.42350995540000003" green="0.41964292530000002" blue="0.41952067609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jme-Za-mTK" customClass="RadioButton" customModule="Trivia_App" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="334" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="fTE-0G-UxF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                                <color key="tintColor" red="0.42350995540000003" green="0.41964292530000002" blue="0.41952067609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="jme-Za-mTK" secondAttribute="trailing" id="0E2-XF-B60"/>
+                                            <constraint firstAttribute="height" constant="200" id="5ka-iZ-0xN"/>
+                                            <constraint firstItem="vNB-q5-BUl" firstAttribute="leading" secondItem="G36-DS-va5" secondAttribute="leading" id="83P-IG-jLh"/>
+                                            <constraint firstItem="jme-Za-mTK" firstAttribute="top" secondItem="vCd-9a-Ej8" secondAttribute="bottom" constant="10" id="H6B-cP-uGJ"/>
+                                            <constraint firstItem="lqm-mh-qQD" firstAttribute="top" secondItem="vNB-q5-BUl" secondAttribute="bottom" constant="10" id="LSM-Lt-8sr"/>
+                                            <constraint firstItem="lqm-mh-qQD" firstAttribute="leading" secondItem="G36-DS-va5" secondAttribute="leading" id="LUT-IG-Xis"/>
+                                            <constraint firstAttribute="trailing" secondItem="vNB-q5-BUl" secondAttribute="trailing" id="V6l-oB-3el"/>
+                                            <constraint firstItem="jme-Za-mTK" firstAttribute="leading" secondItem="G36-DS-va5" secondAttribute="leading" id="fQ3-WU-Fn1"/>
+                                            <constraint firstItem="vCd-9a-Ej8" firstAttribute="top" secondItem="G36-DS-va5" secondAttribute="top" id="hp4-hY-GV5"/>
+                                            <constraint firstItem="vCd-9a-Ej8" firstAttribute="leading" secondItem="G36-DS-va5" secondAttribute="leading" id="j97-yx-VfW"/>
+                                            <constraint firstAttribute="trailing" secondItem="vCd-9a-Ej8" secondAttribute="trailing" id="wTH-vg-Oew"/>
+                                            <constraint firstAttribute="trailing" secondItem="lqm-mh-qQD" secondAttribute="trailing" id="xdv-lD-ZSd"/>
+                                            <constraint firstItem="vNB-q5-BUl" firstAttribute="top" secondItem="jme-Za-mTK" secondAttribute="bottom" constant="10" id="zgs-Km-HCK"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1o2-Q1-efm" secondAttribute="trailing" constant="20" id="AbZ-do-SLp"/>
+                                    <constraint firstItem="1o2-Q1-efm" firstAttribute="top" secondItem="Nvb-wN-iuT" secondAttribute="top" constant="20" id="G6l-k0-ABZ"/>
+                                    <constraint firstItem="owP-yt-eF5" firstAttribute="leading" secondItem="Nvb-wN-iuT" secondAttribute="leading" id="LNo-cQ-maa"/>
+                                    <constraint firstItem="G36-DS-va5" firstAttribute="leading" secondItem="Nvb-wN-iuT" secondAttribute="leading" constant="20" id="Nc7-3i-apf"/>
+                                    <constraint firstAttribute="bottom" secondItem="G36-DS-va5" secondAttribute="bottom" constant="10" id="TAO-eq-xxG"/>
+                                    <constraint firstAttribute="trailing" secondItem="G36-DS-va5" secondAttribute="trailing" constant="20" id="TIp-rg-AVM"/>
+                                    <constraint firstItem="1o2-Q1-efm" firstAttribute="leading" secondItem="Nvb-wN-iuT" secondAttribute="leading" constant="20" id="YtU-oI-TqB"/>
+                                    <constraint firstAttribute="trailing" secondItem="owP-yt-eF5" secondAttribute="trailing" id="doh-pP-1vo"/>
+                                    <constraint firstItem="G36-DS-va5" firstAttribute="top" secondItem="1o2-Q1-efm" secondAttribute="bottom" constant="20" id="xBa-ze-jOW"/>
+                                    <constraint firstItem="owP-yt-eF5" firstAttribute="top" secondItem="1o2-Q1-efm" secondAttribute="bottom" constant="10" id="yJD-da-wfR"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00s-Uf-0Ki" customClass="MyButton" customModule="Trivia_App" customModuleProvider="target">
+                                <rect key="frame" x="30" y="575" width="354" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fNg-RA-CVY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <action selector="btnNextClick:" destination="cQ6-Wa-QKS" eventType="touchUpInside" id="1ab-2L-zj5"/>
+                                    <action selector="btnNextClick:" destination="cQ6-Wa-QKS" eventType="touchUpInside" id="0yc-Ee-yhS"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="00s-Uf-0Ki" secondAttribute="trailing" constant="30" id="9lb-Dw-mnn"/>
+                            <constraint firstItem="Nvb-wN-iuT" firstAttribute="leading" secondItem="YQA-g1-8kb" secondAttribute="leading" constant="20" id="9vL-kZ-2QU"/>
+                            <constraint firstItem="Nvb-wN-iuT" firstAttribute="centerY" secondItem="YQA-g1-8kb" secondAttribute="centerY" constant="-40" id="e09-GW-4ZT"/>
+                            <constraint firstItem="00s-Uf-0Ki" firstAttribute="leading" secondItem="YQA-g1-8kb" secondAttribute="leading" constant="30" id="evH-YN-BBG"/>
+                            <constraint firstItem="00s-Uf-0Ki" firstAttribute="top" secondItem="Nvb-wN-iuT" secondAttribute="bottom" constant="30" id="lzM-xF-Q95"/>
+                            <constraint firstAttribute="trailing" secondItem="Nvb-wN-iuT" secondAttribute="trailing" constant="20" id="ocj-2F-KWq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dsr-z8-pSK"/>
                     </view>
                     <connections>
                         <outlet property="lblQuestText" destination="1o2-Q1-efm" id="HNL-qx-GpT"/>
+                        <outlet property="radBtnOp1" destination="vCd-9a-Ej8" id="O1H-Nx-eUL"/>
+                        <outlet property="radBtnOp2" destination="jme-Za-mTK" id="pJ9-J0-YF4"/>
+                        <outlet property="radBtnOp3" destination="vNB-q5-BUl" id="fIg-bF-B6e"/>
+                        <outlet property="radBtnOp4" destination="lqm-mh-qQD" id="Jdx-wV-TwI"/>
+                        <outlet property="radioButtonGroup" destination="G36-DS-va5" id="ZAw-nB-0FU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LI1-l7-kis" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="957.97101449275374" y="-74.330357142857139"/>
+            <point key="canvasLocation" x="994" y="-62"/>
+        </scene>
+        <!--Question2VC-->
+        <scene sceneID="IqX-4G-xoD">
+            <objects>
+                <viewController storyboardIdentifier="Question2VC" id="6Oh-ag-YcY" customClass="Question2VC" customModule="Trivia_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MdV-eS-wmQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJz-6c-CBC" userLabel="questionView" customClass="MyView" customModule="Trivia_App" customModuleProvider="target">
+                                <rect key="frame" x="20" y="267.5" width="374" height="273.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who is the best cricketer in the world?" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bR-Fr-Asr">
+                                        <rect key="frame" x="20" y="20" width="334" height="23.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="335-B2-cF4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kh-4F-Wm3" userLabel="line view">
+                                        <rect key="frame" x="0.0" y="53.5" width="374" height="1"/>
+                                        <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="vtf-BV-2lm"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLc-Uq-nyF" customClass="CheckboxButtonContainerView" customModule="Trivia_App" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="63.5" width="334" height="200"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpy-uG-y3W" customClass="CheckboxButton" customModule="Trivia_App" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="m1S-da-eNK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                                <color key="tintColor" red="0.42350995540000003" green="0.41964292530000002" blue="0.41952067609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1c-yx-dcq" customClass="CheckboxButton" customModule="Trivia_App" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="334" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="qjL-z6-Wpf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                                <color key="tintColor" red="0.42350995540000003" green="0.41964292530000002" blue="0.41952067609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8C6-Ji-mad" customClass="CheckboxButton" customModule="Trivia_App" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="100" width="334" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="iwZ-1t-06I"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                                <color key="tintColor" red="0.42350995540000003" green="0.41964292530000002" blue="0.41952067609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iF6-cx-cU1" customClass="CheckboxButton" customModule="Trivia_App" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="150" width="334" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="jd2-dp-nrL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                                <color key="tintColor" red="0.42350995540000003" green="0.41964292530000002" blue="0.41952067609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="0H5-eb-fGw"/>
+                                            <constraint firstItem="8C6-Ji-mad" firstAttribute="leading" secondItem="GLc-Uq-nyF" secondAttribute="leading" id="19j-Yl-16F"/>
+                                            <constraint firstAttribute="trailing" secondItem="8C6-Ji-mad" secondAttribute="trailing" id="Csa-aO-vfn"/>
+                                            <constraint firstItem="iF6-cx-cU1" firstAttribute="leading" secondItem="GLc-Uq-nyF" secondAttribute="leading" id="Mun-Bg-yTn"/>
+                                            <constraint firstItem="iF6-cx-cU1" firstAttribute="top" secondItem="8C6-Ji-mad" secondAttribute="bottom" constant="10" id="UQd-8F-HPL"/>
+                                            <constraint firstItem="lpy-uG-y3W" firstAttribute="top" secondItem="GLc-Uq-nyF" secondAttribute="top" id="VXO-Ct-Xqx"/>
+                                            <constraint firstAttribute="trailing" secondItem="lpy-uG-y3W" secondAttribute="trailing" id="eP9-QS-l0V"/>
+                                            <constraint firstAttribute="trailing" secondItem="h1c-yx-dcq" secondAttribute="trailing" id="fdn-ec-xgY"/>
+                                            <constraint firstItem="h1c-yx-dcq" firstAttribute="leading" secondItem="GLc-Uq-nyF" secondAttribute="leading" id="izN-BE-10c"/>
+                                            <constraint firstItem="lpy-uG-y3W" firstAttribute="leading" secondItem="GLc-Uq-nyF" secondAttribute="leading" id="lmo-cZ-uCP"/>
+                                            <constraint firstItem="8C6-Ji-mad" firstAttribute="top" secondItem="h1c-yx-dcq" secondAttribute="bottom" constant="10" id="sXA-B1-rAi"/>
+                                            <constraint firstItem="h1c-yx-dcq" firstAttribute="top" secondItem="lpy-uG-y3W" secondAttribute="bottom" constant="10" id="slG-VD-seP"/>
+                                            <constraint firstAttribute="trailing" secondItem="iF6-cx-cU1" secondAttribute="trailing" id="wQK-XS-eXW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="GLc-Uq-nyF" secondAttribute="trailing" constant="20" id="7ZN-zF-F1x"/>
+                                    <constraint firstItem="GLc-Uq-nyF" firstAttribute="leading" secondItem="ZJz-6c-CBC" secondAttribute="leading" constant="20" id="BNa-r6-Ca6"/>
+                                    <constraint firstItem="4kh-4F-Wm3" firstAttribute="leading" secondItem="ZJz-6c-CBC" secondAttribute="leading" id="LcD-4c-Sr6"/>
+                                    <constraint firstAttribute="trailing" secondItem="4kh-4F-Wm3" secondAttribute="trailing" id="PYz-OG-v46"/>
+                                    <constraint firstItem="5bR-Fr-Asr" firstAttribute="top" secondItem="ZJz-6c-CBC" secondAttribute="top" constant="20" id="Qau-vu-yUI"/>
+                                    <constraint firstItem="5bR-Fr-Asr" firstAttribute="leading" secondItem="ZJz-6c-CBC" secondAttribute="leading" constant="20" id="ojM-sZ-JL4"/>
+                                    <constraint firstAttribute="trailing" secondItem="5bR-Fr-Asr" secondAttribute="trailing" constant="20" id="syj-bW-8lv"/>
+                                    <constraint firstItem="4kh-4F-Wm3" firstAttribute="top" secondItem="5bR-Fr-Asr" secondAttribute="bottom" constant="10" id="u4Z-aM-qe8"/>
+                                    <constraint firstItem="GLc-Uq-nyF" firstAttribute="top" secondItem="5bR-Fr-Asr" secondAttribute="bottom" constant="20" id="vEs-gi-TGo"/>
+                                    <constraint firstAttribute="bottom" secondItem="GLc-Uq-nyF" secondAttribute="bottom" constant="10" id="vbA-XA-5NT"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWj-MG-JYH" customClass="MyButton" customModule="Trivia_App" customModuleProvider="target">
+                                <rect key="frame" x="30" y="571" width="354" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HWS-bX-vAR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnNextClick:" destination="6Oh-ag-YcY" eventType="touchUpInside" id="TF4-ab-kWp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eWj-MG-JYH" firstAttribute="leading" secondItem="MdV-eS-wmQ" secondAttribute="leading" constant="30" id="Brp-oH-AU8"/>
+                            <constraint firstItem="ZJz-6c-CBC" firstAttribute="leading" secondItem="MdV-eS-wmQ" secondAttribute="leading" constant="20" id="DlX-nU-8L5"/>
+                            <constraint firstAttribute="trailing" secondItem="ZJz-6c-CBC" secondAttribute="trailing" constant="20" id="Md5-Oa-aMq"/>
+                            <constraint firstItem="eWj-MG-JYH" firstAttribute="top" secondItem="ZJz-6c-CBC" secondAttribute="bottom" constant="30" id="S3Z-0I-D3O"/>
+                            <constraint firstItem="ZJz-6c-CBC" firstAttribute="centerY" secondItem="MdV-eS-wmQ" secondAttribute="centerY" constant="-44" id="r4B-NR-1XO"/>
+                            <constraint firstAttribute="trailing" secondItem="eWj-MG-JYH" secondAttribute="trailing" constant="30" id="tlW-e4-hf0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lkr-XK-uwx"/>
+                    </view>
+                    <connections>
+                        <outlet property="checkBoxGroup" destination="GLc-Uq-nyF" id="3fU-fI-z4O"/>
+                        <outlet property="chkBtnOp1" destination="lpy-uG-y3W" id="giD-gO-RfZ"/>
+                        <outlet property="chkBtnOp2" destination="h1c-yx-dcq" id="n53-eR-cHL"/>
+                        <outlet property="chkBtnOp3" destination="8C6-Ji-mad" id="0rI-9z-SNu"/>
+                        <outlet property="chkBtnOp4" destination="iF6-cx-cU1" id="6Vx-Pk-Yda"/>
+                        <outlet property="lblQuestText" destination="5bR-Fr-Asr" id="1i9-ZQ-PbI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JNB-xd-mej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1525" y="-62"/>
+        </scene>
+        <!--SummaryVC-->
+        <scene sceneID="iZM-Ht-B61">
+            <objects>
+                <viewController storyboardIdentifier="SummaryVC" id="AFS-uk-v1F" customClass="SummaryVC" customModule="Trivia_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S3S-nf-oUE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bv8-41-Z9m" customClass="MyView" customModule="Trivia_App" customModuleProvider="target">
+                                <rect key="frame" x="20" y="64" width="374" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="2TT-0G-yqf">
+                                        <rect key="frame" x="20" y="15" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="ogf-g3-bmE"/>
+                                            <constraint firstAttribute="width" constant="70" id="z1C-86-Stf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXi-3w-FKg">
+                                        <rect key="frame" x="110" y="35" width="244" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="2TT-0G-yqf" firstAttribute="leading" secondItem="Bv8-41-Z9m" secondAttribute="leading" constant="20" id="1VH-Sb-TsA"/>
+                                    <constraint firstItem="2TT-0G-yqf" firstAttribute="centerY" secondItem="Bv8-41-Z9m" secondAttribute="centerY" id="OEQ-0z-CHH"/>
+                                    <constraint firstAttribute="height" constant="100" id="Sbd-5D-Dto"/>
+                                    <constraint firstAttribute="trailing" secondItem="jXi-3w-FKg" secondAttribute="trailing" constant="20" id="hMW-v9-LEl"/>
+                                    <constraint firstItem="jXi-3w-FKg" firstAttribute="centerY" secondItem="Bv8-41-Z9m" secondAttribute="centerY" id="pvG-vb-AJE"/>
+                                    <constraint firstItem="jXi-3w-FKg" firstAttribute="leading" secondItem="2TT-0G-yqf" secondAttribute="trailing" constant="20" id="wpq-Qb-Oat"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vJb-Er-uEO" userLabel="questionView" customClass="MyView" customModule="Trivia_App" customModuleProvider="target">
+                                <rect key="frame" x="20" y="194" width="374" height="300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOk-h8-UJN" userLabel="titleview">
+                                        <rect key="frame" x="0.0" y="1" width="374" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here are the answers selected:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEY-9U-lNO">
+                                                <rect key="frame" x="20" y="12.5" width="334" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="fv6-iq-bNM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                                <color key="textColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="sEY-9U-lNO" firstAttribute="centerY" secondItem="FOk-h8-UJN" secondAttribute="centerY" id="IwZ-rj-lqY"/>
+                                            <constraint firstAttribute="height" constant="50" id="JvJ-gg-pjE"/>
+                                            <constraint firstAttribute="trailing" secondItem="sEY-9U-lNO" secondAttribute="trailing" constant="20" id="NYP-bk-qSo"/>
+                                            <constraint firstItem="sEY-9U-lNO" firstAttribute="leading" secondItem="FOk-h8-UJN" secondAttribute="leading" constant="20" id="ugc-fa-8ad"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="20P-dv-mmx" userLabel="line view">
+                                        <rect key="frame" x="0.0" y="51" width="374" height="1"/>
+                                        <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="W1m-74-xg8"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TP4-0Z-dwf" userLabel="line view1">
+                                        <rect key="frame" x="20" y="172" width="334" height="1"/>
+                                        <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Bck-Vh-yTI"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Q:2) What are the colors in the Indian national flag?" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hN1-f7-NzT">
+                                        <rect key="frame" x="20" y="193" width="334" height="46.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="94c-9W-0UO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answers : White;Yellow" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKA-cB-CnT">
+                                        <rect key="frame" x="20" y="249.5" width="334" height="23.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="Vmz-KZ-8BW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Q:1) Who is the best cricketer in the world?" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQA-1Q-t98">
+                                        <rect key="frame" x="20" y="72" width="334" height="46.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="mZB-kf-k2a"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer: Sachin Tendulkar" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Lc-9b-9FP">
+                                        <rect key="frame" x="20" y="128.5" width="334" height="23.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="xh6-zl-wo2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="OQA-1Q-t98" firstAttribute="top" secondItem="20P-dv-mmx" secondAttribute="bottom" constant="20" id="7CB-31-w2t"/>
+                                    <constraint firstItem="hN1-f7-NzT" firstAttribute="leading" secondItem="vJb-Er-uEO" secondAttribute="leading" constant="20" id="7gk-eo-pqy"/>
+                                    <constraint firstItem="OQA-1Q-t98" firstAttribute="leading" secondItem="vJb-Er-uEO" secondAttribute="leading" constant="20" id="8g4-3j-dqB"/>
+                                    <constraint firstAttribute="trailing" secondItem="FOk-h8-UJN" secondAttribute="trailing" id="AWH-P3-sWi"/>
+                                    <constraint firstItem="20P-dv-mmx" firstAttribute="top" secondItem="FOk-h8-UJN" secondAttribute="bottom" id="Cui-ao-Mrf"/>
+                                    <constraint firstItem="3Lc-9b-9FP" firstAttribute="top" secondItem="OQA-1Q-t98" secondAttribute="bottom" constant="10" id="EZO-a8-AGJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="20P-dv-mmx" secondAttribute="trailing" id="HGW-cL-o3I"/>
+                                    <constraint firstAttribute="height" constant="300" id="J4W-Ys-OAp"/>
+                                    <constraint firstItem="FOk-h8-UJN" firstAttribute="leading" secondItem="vJb-Er-uEO" secondAttribute="leading" id="KPb-Qx-pPg"/>
+                                    <constraint firstItem="FOk-h8-UJN" firstAttribute="top" secondItem="vJb-Er-uEO" secondAttribute="top" constant="1" id="Kh6-VZ-GB0"/>
+                                    <constraint firstItem="3Lc-9b-9FP" firstAttribute="leading" secondItem="vJb-Er-uEO" secondAttribute="leading" constant="20" id="Khe-0O-iqg"/>
+                                    <constraint firstAttribute="trailing" secondItem="TP4-0Z-dwf" secondAttribute="trailing" constant="20" id="KjA-1k-s2U"/>
+                                    <constraint firstItem="hN1-f7-NzT" firstAttribute="top" secondItem="TP4-0Z-dwf" secondAttribute="bottom" constant="20" id="LCn-3X-kry"/>
+                                    <constraint firstItem="vKA-cB-CnT" firstAttribute="leading" secondItem="vJb-Er-uEO" secondAttribute="leading" constant="20" id="VD2-lQ-vLH"/>
+                                    <constraint firstItem="vKA-cB-CnT" firstAttribute="top" secondItem="hN1-f7-NzT" secondAttribute="bottom" constant="10" id="cJT-j3-4lr"/>
+                                    <constraint firstAttribute="trailing" secondItem="OQA-1Q-t98" secondAttribute="trailing" constant="20" id="dAa-IZ-fjm"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Lc-9b-9FP" secondAttribute="trailing" constant="20" id="hLX-wh-IKL"/>
+                                    <constraint firstItem="20P-dv-mmx" firstAttribute="leading" secondItem="vJb-Er-uEO" secondAttribute="leading" id="hWs-yy-0GT"/>
+                                    <constraint firstAttribute="trailing" secondItem="hN1-f7-NzT" secondAttribute="trailing" constant="20" id="hzU-ZL-Qus"/>
+                                    <constraint firstItem="TP4-0Z-dwf" firstAttribute="leading" secondItem="vJb-Er-uEO" secondAttribute="leading" constant="20" id="iMO-ub-9KA"/>
+                                    <constraint firstAttribute="trailing" secondItem="vKA-cB-CnT" secondAttribute="trailing" constant="20" id="l2H-Bc-PaF"/>
+                                    <constraint firstItem="TP4-0Z-dwf" firstAttribute="top" secondItem="3Lc-9b-9FP" secondAttribute="bottom" constant="20" id="shM-Yc-iti"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="27q-pc-4vx">
+                                <rect key="frame" x="50" y="712" width="314" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3O5-Dt-yEf" customClass="MyButton" customModule="Trivia_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
+                                        <color key="backgroundColor" red="0.95178943869999999" green="0.6654840112" blue="0.044296436010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="KU8-Pb-NM8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                        <state key="normal" title="Finish">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFinishClick:" destination="AFS-uk-v1F" eventType="touchUpInside" id="H8e-bh-KH7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0b6-9J-HbR" customClass="MyButton" customModule="Trivia_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="80" width="314" height="50"/>
+                                        <color key="backgroundColor" red="0.23921568627450979" green="0.23921568627450979" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="o1V-g1-hzU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                        <state key="normal" title="History">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnHistoryClick:" destination="AFS-uk-v1F" eventType="touchUpInside" id="bJF-Jy-2IK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="O2H-md-3lK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="27q-pc-4vx" secondAttribute="trailing" constant="30" id="4Ic-iH-o7W"/>
+                            <constraint firstItem="vJb-Er-uEO" firstAttribute="leading" secondItem="S3S-nf-oUE" secondAttribute="leading" constant="20" id="4LH-Zn-imA"/>
+                            <constraint firstItem="Bv8-41-Z9m" firstAttribute="top" secondItem="mkY-mE-pI8" secondAttribute="top" constant="20" id="SuW-6X-6hD"/>
+                            <constraint firstAttribute="trailing" secondItem="Bv8-41-Z9m" secondAttribute="trailing" constant="20" id="Y1K-hk-1Mf"/>
+                            <constraint firstItem="Bv8-41-Z9m" firstAttribute="leading" secondItem="S3S-nf-oUE" secondAttribute="leading" constant="20" id="YBw-Yp-ghV"/>
+                            <constraint firstAttribute="trailing" secondItem="vJb-Er-uEO" secondAttribute="trailing" constant="20" id="acr-Z1-1iN"/>
+                            <constraint firstItem="27q-pc-4vx" firstAttribute="leading" secondItem="S3S-nf-oUE" secondAttribute="leadingMargin" constant="30" id="cSg-AV-PIY"/>
+                            <constraint firstItem="mkY-mE-pI8" firstAttribute="bottom" secondItem="27q-pc-4vx" secondAttribute="bottom" constant="20" id="g5r-WH-eIM"/>
+                            <constraint firstItem="vJb-Er-uEO" firstAttribute="top" secondItem="Bv8-41-Z9m" secondAttribute="bottom" constant="30" id="gaL-Ru-caQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mkY-mE-pI8"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="2TT-0G-yqf" id="5xs-t7-5es"/>
+                        <outlet property="lblAns1" destination="3Lc-9b-9FP" id="tWy-Ht-ofv"/>
+                        <outlet property="lblAns2" destination="vKA-cB-CnT" id="tJ0-Nt-7ru"/>
+                        <outlet property="lblName" destination="jXi-3w-FKg" id="0VB-0k-dV0"/>
+                        <outlet property="lblQuestion1" destination="OQA-1Q-t98" id="k0R-bY-9MD"/>
+                        <outlet property="lblQuestion2" destination="hN1-f7-NzT" id="8NS-6X-8KQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AIh-ta-R2U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2132" y="-155"/>
+        </scene>
+        <!--HistoryVC-->
+        <scene sceneID="Dn7-OR-FzU">
+            <objects>
+                <viewController storyboardIdentifier="HistoryVC" id="LM2-8c-4Dd" customClass="HistoryVC" customModule="Trivia_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2W8-by-rdy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EvB-4Y-1Gx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="323" id="sjy-Eg-jTb" customClass="HistoryCell" customModule="Trivia_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="323"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sjy-Eg-jTb" id="yUN-Cz-fSb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="323"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="U0f-DN-RaW" userLabel="questionView" customClass="MyView" customModule="Trivia_App" customModuleProvider="target">
+                                                    <rect key="frame" x="11" y="0.0" width="383" height="300"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bD3-EQ-uKU" userLabel="titleview">
+                                                            <rect key="frame" x="0.0" y="1" width="383" height="50"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME 1 : 15th March 2:00 pm" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4H-rt-vZC">
+                                                                    <rect key="frame" x="20" y="12.5" width="343" height="25"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="1aw-Up-Fb9"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                                                    <color key="textColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstItem="J4H-rt-vZC" firstAttribute="centerY" secondItem="bD3-EQ-uKU" secondAttribute="centerY" id="6lx-tr-N53"/>
+                                                                <constraint firstItem="J4H-rt-vZC" firstAttribute="leading" secondItem="bD3-EQ-uKU" secondAttribute="leading" constant="20" id="NUv-WL-jCO"/>
+                                                                <constraint firstAttribute="trailing" secondItem="J4H-rt-vZC" secondAttribute="trailing" constant="20" id="Zg1-S5-aap"/>
+                                                                <constraint firstAttribute="height" constant="50" id="uEa-gB-xzU"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJ3-sR-mhC" userLabel="line view">
+                                                            <rect key="frame" x="0.0" y="51" width="383" height="1"/>
+                                                            <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="vHa-oe-2B2"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFq-do-iKd" userLabel="line view1">
+                                                            <rect key="frame" x="20" y="189" width="343" height="1"/>
+                                                            <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="Dzc-MD-dMI"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Q:2) What are the colors in the Indian national flag?" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqY-It-6Ge">
+                                                            <rect key="frame" x="20" y="210" width="343" height="46.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="syt-W6-vg9"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answers : White;Yellow" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygx-aS-h1L">
+                                                            <rect key="frame" x="20" y="266.5" width="343" height="23.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="n8R-V8-k7l"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Q:1) Who is the best cricketer in the world?" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSk-Aj-zB4">
+                                                            <rect key="frame" x="20" y="112" width="343" height="23.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="bGW-4p-WM0"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer: Sachin Tendulkar" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsz-R6-LCO">
+                                                            <rect key="frame" x="20" y="145.5" width="343" height="23.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="NP2-So-pbJ"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: Rahula Sharma" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgy-Jg-sRA">
+                                                            <rect key="frame" x="20" y="62" width="343" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="ntn-GW-GCr"/>
+                                                                <constraint firstAttribute="height" constant="40" id="v3x-mN-HNF"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                                            <color key="textColor" red="0.23921568627450979" green="0.23921568627450979" blue="0.17288970168546869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="vSk-Aj-zB4" firstAttribute="leading" secondItem="U0f-DN-RaW" secondAttribute="leading" constant="20" id="26l-pG-4UT"/>
+                                                        <constraint firstItem="bD3-EQ-uKU" firstAttribute="top" secondItem="U0f-DN-RaW" secondAttribute="top" constant="1" id="7n0-1u-ikq"/>
+                                                        <constraint firstItem="lJ3-sR-mhC" firstAttribute="leading" secondItem="U0f-DN-RaW" secondAttribute="leading" id="7tQ-wK-IeF"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hsz-R6-LCO" secondAttribute="trailing" constant="20" id="DOb-Ix-7Pb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="HqY-It-6Ge" secondAttribute="trailing" constant="20" id="Gad-SJ-sys"/>
+                                                        <constraint firstItem="IFq-do-iKd" firstAttribute="leading" secondItem="U0f-DN-RaW" secondAttribute="leading" constant="20" id="Iz3-8B-yRb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="bD3-EQ-uKU" secondAttribute="trailing" id="XiB-bl-c2G"/>
+                                                        <constraint firstAttribute="trailing" secondItem="IFq-do-iKd" secondAttribute="trailing" constant="20" id="cfJ-Xm-ywN"/>
+                                                        <constraint firstAttribute="trailing" secondItem="vSk-Aj-zB4" secondAttribute="trailing" constant="20" id="fq0-NR-hxg"/>
+                                                        <constraint firstItem="vSk-Aj-zB4" firstAttribute="top" secondItem="lJ3-sR-mhC" secondAttribute="bottom" constant="60" id="g0I-XO-bug"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Xgy-Jg-sRA" secondAttribute="trailing" constant="20" id="hwC-67-gYz"/>
+                                                        <constraint firstItem="lJ3-sR-mhC" firstAttribute="top" secondItem="bD3-EQ-uKU" secondAttribute="bottom" id="i2S-pM-1gZ"/>
+                                                        <constraint firstItem="hsz-R6-LCO" firstAttribute="leading" secondItem="U0f-DN-RaW" secondAttribute="leading" constant="20" id="jTJ-aQ-6d4"/>
+                                                        <constraint firstItem="HqY-It-6Ge" firstAttribute="leading" secondItem="U0f-DN-RaW" secondAttribute="leading" constant="20" id="kqQ-WM-0to"/>
+                                                        <constraint firstItem="HqY-It-6Ge" firstAttribute="top" secondItem="IFq-do-iKd" secondAttribute="bottom" constant="20" id="qSV-mW-rmL"/>
+                                                        <constraint firstItem="bD3-EQ-uKU" firstAttribute="leading" secondItem="U0f-DN-RaW" secondAttribute="leading" id="qfO-Vy-HKO"/>
+                                                        <constraint firstItem="ygx-aS-h1L" firstAttribute="leading" secondItem="U0f-DN-RaW" secondAttribute="leading" constant="20" id="uHC-qX-xS4"/>
+                                                        <constraint firstItem="hsz-R6-LCO" firstAttribute="top" secondItem="vSk-Aj-zB4" secondAttribute="bottom" constant="10" id="uJn-cj-AFY"/>
+                                                        <constraint firstItem="Xgy-Jg-sRA" firstAttribute="leading" secondItem="U0f-DN-RaW" secondAttribute="leading" constant="20" id="urx-pd-wMU"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ygx-aS-h1L" secondAttribute="trailing" constant="20" id="vX1-EC-E6i"/>
+                                                        <constraint firstItem="ygx-aS-h1L" firstAttribute="top" secondItem="HqY-It-6Ge" secondAttribute="bottom" constant="10" id="vfY-kr-ykd"/>
+                                                        <constraint firstItem="IFq-do-iKd" firstAttribute="top" secondItem="hsz-R6-LCO" secondAttribute="bottom" constant="20" id="xea-81-nhI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lJ3-sR-mhC" secondAttribute="trailing" id="yR9-2J-Zxz"/>
+                                                        <constraint firstItem="Xgy-Jg-sRA" firstAttribute="top" secondItem="lJ3-sR-mhC" secondAttribute="bottom" constant="10" id="zcp-99-Rwv"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="lblAns1" destination="hsz-R6-LCO" id="Mfb-pt-8mK"/>
+                                            <outlet property="lblAns2" destination="ygx-aS-h1L" id="NcG-K0-s6X"/>
+                                            <outlet property="lblGameTime" destination="J4H-rt-vZC" id="Svz-A3-F8f"/>
+                                            <outlet property="lblName" destination="Xgy-Jg-sRA" id="rWT-Jq-Uxr"/>
+                                            <outlet property="lblQ1" destination="vSk-Aj-zB4" id="enk-gc-A8X"/>
+                                            <outlet property="lblQ2" destination="HqY-It-6Ge" id="9QT-d2-SdP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EvB-4Y-1Gx" firstAttribute="top" secondItem="vBc-yl-Jrt" secondAttribute="top" id="D0l-aY-nzf"/>
+                            <constraint firstItem="vBc-yl-Jrt" firstAttribute="bottom" secondItem="EvB-4Y-1Gx" secondAttribute="bottom" id="JAq-2B-fI9"/>
+                            <constraint firstAttribute="trailing" secondItem="EvB-4Y-1Gx" secondAttribute="trailing" id="hnu-LY-8JQ"/>
+                            <constraint firstItem="EvB-4Y-1Gx" firstAttribute="leading" secondItem="vBc-yl-Jrt" secondAttribute="leading" id="rjC-p4-EGr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vBc-yl-Jrt"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="EvB-4Y-1Gx" id="qf4-vZ-E6B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZRc-qp-UpN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2886.9565217391305" y="-229.01785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aSM-K2-uwQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oxV-yg-Tec" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cac-KR-wOP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="T1S-2A-3vh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pjs-rD-dQF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-664" y="-80"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="user" width="320" height="320"/>
+    </resources>
 </document>
