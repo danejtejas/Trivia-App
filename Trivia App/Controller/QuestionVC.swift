@@ -35,8 +35,11 @@ class QuestionVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.setLightMode()
+        
         filterQuestion()
-       loadQuestion()
+        loadQuestion()
         
         
         radBtnOp1.radioCircle = RadioButtonCircleStyle.init(outerCircle: 23, innerCircle: 10, outerCircleBorder: 2, contentPadding: 10)

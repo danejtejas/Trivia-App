@@ -31,6 +31,8 @@ class Question2VC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+            self.setLightMode()
+        
         checkBoxGroup.buttonContainer.delegate = self
         checkBoxGroup.buttonContainer.setEachCheckboxButtonColor {
             return CheckBoxColor(activeColor: $0.tintColor, inactiveColor: UIColor.clear, inactiveBorderColor: $0.tintColor, checkMarkColor: UIColor.white)

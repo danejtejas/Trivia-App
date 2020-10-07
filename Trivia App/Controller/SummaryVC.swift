@@ -10,8 +10,7 @@ import UIKit
 
 class SummaryVC: UIViewController {
 
-    @IBOutlet weak var imageView : UIImageView!
-    
+  
     @IBOutlet weak var lblName : UILabel!
     
     
@@ -24,7 +23,7 @@ class SummaryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      
+         self.setLightMode()
         navigationItem.title = "Summary"
         
         if let username = UserDefaults.standard.value(forKey: Global.UserDefaultKey.userNameKey) as? String
@@ -33,8 +32,7 @@ class SummaryVC: UIViewController {
         }
         
         
-        imageView.layer.cornerRadius = imageView.frame.height / 2
-        imageView.clipsToBounds = true
+    
         
         loadData()
         

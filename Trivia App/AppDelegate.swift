@@ -27,12 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: UISceneSession Lifecycle
     
+    @available(iOS 13, *)
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
     
+    @available(iOS 13, *)
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
@@ -95,15 +97,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-        
-        
-        
         let navBgColor : UIColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
         let navTitleColor : UIColor = .white
         
         
-        let titleFontAttrs = [ NSAttributedString.Key.font: UIFont(name: "Avenir-Medium", size: 17)!, NSAttributedString.Key.foregroundColor: navTitleColor ]
-        let barButtonFontAttrs = [ NSAttributedString.Key.font: UIFont(name: "Avenir-Medium", size: 14)! ]
+        let titleFontAttrs = [ NSAttributedString.Key.font: UIFont(name: "Avenir-Heavy", size: 18)!, NSAttributedString.Key.foregroundColor: navTitleColor ]
+        let barButtonFontAttrs = [ NSAttributedString.Key.font: UIFont(name: "Avenir-Heavy", size: 15)! ]
         
         UINavigationBar.appearance().tintColor = UIColor.white // bar icons
         

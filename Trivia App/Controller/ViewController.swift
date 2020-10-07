@@ -15,25 +15,28 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var nameView : MyView!
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-          if #available(iOS 13, *) {
-              return .darkContent
-          } else {
-              return .default
-          }
-    }
-
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       self.setLightMode()
         navigationItem.title = "User Info"
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture))
+        
+        view.addGestureRecognizer(tapGesture)
+        
+        txtName.delegate = self
         txtName.becomeFirstResponder()
     }
 
 
+    @objc  func handleTapGesture( _ gesture : UITapGestureRecognizer)  {
+        
+        view.endEditing(true)
+    }
+    
   @IBAction  func btnNextClick(sender : UIButton)  {
         
     if (txtName.text?.isEmpty ?? true)
@@ -68,13 +71,16 @@ class ViewController: UIViewController {
     
    
     
-    
-    
-   
-    
-    
     }
     
     
 }
 
+
+extension ViewController : UITextFieldDelegate
+{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
+    }
+}

@@ -33,4 +33,13 @@ extension UIViewController
     }
     
     
+    func setLightMode()
+    {
+        if #available(iOS 13, *)
+        {
+            overrideUserInterfaceStyle = .light
+        }
+        
+    }
+    
 }
